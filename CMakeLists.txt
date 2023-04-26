@@ -3,4 +3,4 @@ project(Algo C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(Algo main.c)
+add_executable(Algo Non_recursive.c)

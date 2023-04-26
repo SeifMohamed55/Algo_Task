@@ -105,8 +105,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "I:/Algo/cmake-build-debug",
-		"source" : "I:/Algo"
+		"build" : "I:/Algo_Task/cmake-build-debug",
+		"source" : "I:/Algo_Task"
 	},
 	"version" : 
 	{
