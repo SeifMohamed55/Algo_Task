@@ -1,2 +1,2 @@
 # Algo_Task
-Algorithm Task 2
+This is the repository for Algorithm assignment
