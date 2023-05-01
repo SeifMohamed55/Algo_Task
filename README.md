@@ -1,6 +1,6 @@
 # Algo_Task
 This is the repository for Algorithm assignment
-
+## Comparison:-
 1. Non_recursive algorithm:
     - Time complexity: O(n)
     - Space complexity: O(1)  The size is constant for all inputs
