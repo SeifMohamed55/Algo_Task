@@ -32,8 +32,10 @@ int non_recursive(){
     }
     if (mx > small_array_size/2)
     {
+        free(freq);
         return num;
     }
+    free(freq);
     return INT_MIN;
 
 }

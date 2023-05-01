@@ -12,7 +12,7 @@ void recursive_frequency_array(int arr[], int small_array_size, int freq[]) {
     recursive_frequency_array(arr + 1, small_array_size-1, freq);
 }
 //return the number if found and INT_MIN otherwise
-int recursive (int freq[], int small_array_size, int arr[])
+int solve (int freq[], int small_array_size, int arr[])
 {
     int mx = INT_MIN;
     int num = INT_MIN;
@@ -29,8 +29,9 @@ int recursive (int freq[], int small_array_size, int arr[])
     }
     return INT_MIN;
 }
+
 //drive function
-int recusrsive_method() {
+int recursive() {
     int freq_size = (int)(5 * pow(10, 4));
     int *freq = malloc(freq_size * sizeof(int));
     int small_array_size;
@@ -44,7 +45,9 @@ int recusrsive_method() {
         freq[i] = 0;
     }
     recursive_frequency_array(arr, small_array_size, freq);
-    int x = recursive(freq, small_array_size, arr);
+    int x = solve(freq, small_array_size, arr);
+    free(freq);
+    free(arr);
     return x;
 }
 

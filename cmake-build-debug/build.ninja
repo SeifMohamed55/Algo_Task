@@ -61,14 +61,8 @@ build CMakeFiles/Algo.dir/recursive.c.obj: C_COMPILER__Algo_Debug I$:/Algo_Task/
   OBJECT_DIR = CMakeFiles\Algo.dir
   OBJECT_FILE_DIR = CMakeFiles\Algo.dir
 
-build CMakeFiles/Algo.dir/non_recursive_main.c.obj: C_COMPILER__Algo_Debug I$:/Algo_Task/non_recursive_main.c || cmake_object_order_depends_target_Algo
-  DEP_FILE = CMakeFiles\Algo.dir\non_recursive_main.c.obj.d
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles\Algo.dir
-  OBJECT_FILE_DIR = CMakeFiles\Algo.dir
-
-build CMakeFiles/Algo.dir/recursive_main.c.obj: C_COMPILER__Algo_Debug I$:/Algo_Task/recursive_main.c || cmake_object_order_depends_target_Algo
-  DEP_FILE = CMakeFiles\Algo.dir\recursive_main.c.obj.d
+build CMakeFiles/Algo.dir/main.c.obj: C_COMPILER__Algo_Debug I$:/Algo_Task/main.c || cmake_object_order_depends_target_Algo
+  DEP_FILE = CMakeFiles\Algo.dir\main.c.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\Algo.dir
   OBJECT_FILE_DIR = CMakeFiles\Algo.dir
@@ -81,7 +75,7 @@ build CMakeFiles/Algo.dir/recursive_main.c.obj: C_COMPILER__Algo_Debug I$:/Algo_
 #############################################
 # Link the executable Algo.exe
 
-build Algo.exe: C_EXECUTABLE_LINKER__Algo_Debug CMakeFiles/Algo.dir/Non_recursive.c.obj CMakeFiles/Algo.dir/recursive.c.obj CMakeFiles/Algo.dir/non_recursive_main.c.obj CMakeFiles/Algo.dir/recursive_main.c.obj
+build Algo.exe: C_EXECUTABLE_LINKER__Algo_Debug CMakeFiles/Algo.dir/Non_recursive.c.obj CMakeFiles/Algo.dir/recursive.c.obj CMakeFiles/Algo.dir/main.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Algo.dir
