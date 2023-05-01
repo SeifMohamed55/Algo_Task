@@ -1,0 +1,48 @@
+Function: recursive()
+
+Input: None
+Output: an integer x
+
+1. freq_size ← 5 * 10^4
+2. Allocate memory for freq with size freq_size * sizeof(int)
+3. small_array_size ← read integer from input
+4. Allocate memory for arr with size small_array_size * sizeof(int)
+5. For i from 0 to 5 * 10^4 do
+6.    freq[i] ← 0
+7. End for
+8. For i from 0 to small_array_size - 1 do
+9.    arr[i] ← read integer from input
+10. End for
+11. Call recursive_frequency_array(arr, small_array_size, freq)
+12. x ← solve(freq, small_array_size, arr)
+13. Free memory allocated for freq
+14. Free memory allocated for arr
+15. Return x
+
+Function: recursive_frequency_array(arr, small_array_size, freq)
+
+Input: an array arr of integers, an integer small_array_size representing the size of arr, an array freq of integers representing the frequency of each number in arr
+Output: None
+
+1. If small_array_size equals 0, return
+2. first ← arr[0]
+3. freq[first] ← freq[first] + 1
+4. Call recursive_frequency_array(arr + 1, small_array_size - 1, freq)
+
+Function: solve(freq, small_array_size, arr)
+
+Input: an array freq of integers representing the frequency of each number in arr, an integer small_array_size representing the size of arr, an array arr of integers
+Output: an integer x
+
+1. mx ← INT_MIN
+2. num ← INT_MIN
+3. For i from 0 to small_array_size - 1 do
+4.    If mx is less than freq[arr[i]] then
+5.        mx ← freq[arr[i]]
+6.        num ← arr[i]
+7.    End if
+8. End for
+9. If mx is greater than small_array_size / 2 then
+10.   Return num
+11. End if
+12. Return INT_MIN

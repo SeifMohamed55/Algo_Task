@@ -1,0 +1,29 @@
+Function: non_recursive()
+
+Input: None
+Output: an integer x
+
+ size ← 5 * 10^4
+ Allocate memory for freq with size size * sizeof(int)
+ small_array_size ← read integer from input
+ For i from 0 to size - 1 do
+    freq[i] ← 0
+ End for
+ For i from 0 to small_array_size - 1 do
+    x ← read integer from input
+    freq[x] ← freq[x] + 1
+ End for
+ mx ← INT_MIN
+ num ← INT_MIN
+ For i from 0 to size - 1 do
+    If mx is less than freq[i] then
+        mx ← freq[i]
+        num ← i
+    End if
+ End for
+ If mx is greater than small_array_size / 2 then
+   Free memory allocated for freq
+   Return num
+ End if
+ Free memory allocated for freq
+ Return INT_MIN
