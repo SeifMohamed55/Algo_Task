@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <stdlib.h>
 //calculate the frequency array recursively
-void recursive_frequency_array(int arr[], int small_array_size, int freq[]) {
+void recursive_frequency_array(int arr[], int small_array_size, int freq[]) {  //T(n) = T(n-1) -> O(n)
     if (small_array_size == 0) {
         return;
     }
@@ -11,6 +11,7 @@ void recursive_frequency_array(int arr[], int small_array_size, int freq[]) {
     freq[first]++;
     recursive_frequency_array(arr + 1, small_array_size-1, freq);
 }
+
 //return the number if found and INT_MIN otherwise
 int solve (int freq[], int small_array_size, int arr[])
 {
@@ -41,10 +42,10 @@ int recursive() {
         scanf("%d", &arr[i]);
     }
 
-    for (int i = 0; i < (int)(5 * pow(10, 4)); ++i) {
+    for (int i = 0; i < (int)(5 * pow(10, 4)); ++i) { // O(n)
         freq[i] = 0;
     }
-    recursive_frequency_array(arr, small_array_size, freq);
+    recursive_frequency_array(arr, small_array_size, freq); //O(n)
     int x = solve(freq, small_array_size, arr);
     free(freq);
     free(arr);
