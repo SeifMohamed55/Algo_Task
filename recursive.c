@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <math.h>
+#include <limits.h>
+#include <stdlib.h>
+//calculate the frequency array recursively
+void recursive_frequency_array(int arr[], int small_array_size, int freq[]) {
+    if (small_array_size == 0) {
+        return;
+    }
+    int first = arr[0];
+    freq[first]++;
+    recursive_frequency_array(arr + 1, small_array_size-1, freq);
+}
+//return the number if found and INT_MIN otherwise
+int recursive (int freq[], int small_array_size, int arr[])
+{
+    int mx = INT_MIN;
+    int num = INT_MIN;
+
+    for (int i = 0; i < small_array_size; ++i) {
+        if (mx < freq[arr[i]] ){
+            mx = freq[arr[i]]; //freq[arr[i]] number of repetition
+            num = arr[i]; //number itself
+        }
+    }
+    if (mx > small_array_size / 2)
+    {
+        return num;
+    }
+    return INT_MIN;
+}
+//drive function
+int recusrsive_method() {
+    int freq_size = (int)(5 * pow(10, 4));
+    int *freq = malloc(freq_size * sizeof(int));
+    int small_array_size;
+    scanf("%d", &small_array_size);
+    int *arr =  malloc(small_array_size * sizeof(int));
+    for (int i = 0; i < small_array_size; ++i) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < (int)(5 * pow(10, 4)); ++i) {
+        freq[i] = 0;
+    }
+    recursive_frequency_array(arr, small_array_size, freq);
+    int x = recursive(freq, small_array_size, arr);
+    return x;
+}
+

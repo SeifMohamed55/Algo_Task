@@ -1,2 +1,5 @@
 # ninja log v5
-157	338	7042350442858977	Algo.exe	fd66f69087709be0
+142	449	7046551285861904	Algo.exe	421fe627951575c2
+3	136	7046551282741938	CMakeFiles/Algo.dir/Non_recursive.c.obj	deddf568baf924de
+11	198	7046547339994903	CMakeFiles/Algo.dir/recursive.c.obj	c31776039c7704eb
+12	141	7046551282791929	CMakeFiles/Algo.dir/main.c.obj	2d8f00f7ffbc19ef

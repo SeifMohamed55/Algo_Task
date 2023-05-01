@@ -1,34 +1,40 @@
 #include <stdio.h>
 #include <math.h>
 #include <limits.h>
-int main() {
-    int a[(int)(5 * pow(10, 4))];
+#include <stdlib.h>
+/*
+ * non_recusive - takes input from user and returns the most occurred number in the array if more than half of it
+ *
+ * Returns: The most occurred number in the array if (it occurred more than half the size of array)
+ *          returns: INT_MIN otherwise
+*/
+int non_recursive(){
     int size = (int)(5 * pow(10, 4));
+    int *freq = malloc(size * sizeof(int));
+    int small_array_size,x;
 
-    for (int i = 0; i < size; ++i) {
-        a[i] = 0;
+    for (int i = 0; i < size; ++i){
+        freq[i] = 0;
     }
-    int n,x;
-    scanf("%d",&n);
-    for (int i = 0; i < n; ++i) {
+    scanf("%d",&small_array_size);
+
+    for (int i = 0; i < small_array_size; ++i) {
         scanf("%d", &x);
-        a[x]++;
+        freq[x]++;
     }
     int mx = INT_MIN;
     int num = INT_MIN;
-    for (int i = 0; i < size - 1; ++i) {
-        if (mx < a[i] ){
-            mx = a[i];
+    for (int i = 0; i < size; ++i) {
+        if (mx < freq[i] ){
+            mx = freq[i];
             num = i;
         }
     }
-    if (mx > n/2)
+    if (mx > small_array_size/2)
     {
-        printf("%d", num);
+        return num;
     }
-    else
-    {
-        printf("%d", -1);
-    }
-    return 0;
+    return INT_MIN;
+
 }
+
