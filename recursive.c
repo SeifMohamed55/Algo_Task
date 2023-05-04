@@ -36,6 +36,7 @@ int recursive() {
     int freq_size = (int)(5 * pow(10, 4));
     int *freq = malloc(freq_size * sizeof(int));
     int small_array_size;
+    printf("Enter the size of array\n");
     scanf("%d", &small_array_size);
     int *arr =  malloc(small_array_size * sizeof(int));
     for (int i = 0; i < small_array_size; ++i) {

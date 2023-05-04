@@ -16,6 +16,7 @@ int non_recursive(){
     for (int i = 0; i < size; ++i){
         freq[i] = 0;
     }
+    printf("Enter the size of array\n");
     scanf("%d",&small_array_size);
 
     for (int i = 0; i < small_array_size; ++i) {
