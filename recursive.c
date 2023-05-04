@@ -2,6 +2,15 @@
 #include <math.h>
 #include <limits.h>
 #include <stdlib.h>
+/* Time complexity:
+T(n) = T(n-1) + O(1)
+ = T(n-2) + 2 * O(1)
+ = T(n-3) + 3 * O(1)
+ = ...
+ = T(0) + n * O(1)
+ = O(n)
+ Space complexity: O(n) size of input array.
+ */
 //calculate the frequency array recursively
 void recursive_frequency_array(int arr[], int small_array_size, int freq[]) {  //T(n) = T(n-1) -> O(n)
     if (small_array_size == 0) {
